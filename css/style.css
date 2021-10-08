@@ -1,0 +1,250 @@
+
+:root{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan1: hsl(183, 100%, 15%);
+    --Darkgrayishcyan2: hsl(184, 14%, 56%);
+    --Lightgrayishcyan1: hsl(185, 41%, 84%);
+    --Lightgrayishcyan2: hsl(189, 41%, 97%);
+    --Lightgray:#F3F8FB;
+    --DollarColor: #38BDAC;
+    --warningText: #D1ADA4;
+}
+
+
+html, body {
+    margin:0px;
+    height:100%;
+}
+
+body{
+    font-family: 'Space Mono', monospace;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Lightgrayishcyan1);
+}
+
+.title_container{
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+
+.calculator_container{
+    width: 70%;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+        "left right";
+}
+
+.left_container{
+    grid-area: left;
+}
+
+.right_container{
+    grid-area: right;
+    background-color: var(--Verydarkcyan1);
+    border-radius: 10px;
+}
+
+.left_input_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-input-field{
+    text-align:end;
+    margin: 1rem 0 0 0;
+}
+
+.bill-input{
+    background: url("../images/icon-dollar.svg") no-repeat;
+    background-position-x: 0.25rem;
+    background-position-y: 0.25rem;
+}
+
+.bill_label_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.select_tip_container input[type=radio]{
+    display: none;
+}
+
+.select_tip_container{
+    display: grid;
+    gap:0.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+        "label label label"
+        "fivePct tenPct fifteenPct"
+        "twentyfivePct fiftyPct custom";
+}
+
+.select_tip_label{
+    grid-area: label;
+}
+
+#tip_5_percentage_bttn{
+    grid-area: fivePct;
+}
+
+#tip_10_percentage_bttn{
+    grid-area: tenPct;
+}
+
+#tip_15_percentage_bttn{
+    grid-area: fifteenPct;
+}
+
+#tip_25_percentage_bttn{
+    grid-area: twentyfivePct;
+}
+
+#tip_50_percentage_bttn{
+    grid-area: fiftyPct;
+}
+
+#custom_tip_percentage_bttn{
+    grid-area: custom;
+    background-color: var(--Lightgrayishcyan2);
+    text-align: center;
+}
+
+#custom_tip_percentage_bttn:hover{
+    cursor: grab;
+    border-width: 2px;
+    border-color: var(--DollarColor);
+    box-shadow: none;
+}
+
+.people_amount{
+    grid-area: number_of_people;
+}
+
+.number_of_people_label_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.people-input{
+    background: url("../images/icon-person.svg") no-repeat;
+    background-position-x: 0.25rem;
+    background-position-y: 0.25rem;
+}
+
+.right_display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.left_paragraphs{
+    display: flex;
+    flex-direction: column;
+}
+
+.left_paragraphs p{
+    margin: 0;
+}
+
+.top_paragraph{
+    color: white;
+}
+
+.bottom_paragraph{
+    color:var(--Darkgrayishcyan2)
+}
+
+.right_dollar_amount{
+    margin-right: 1rem;
+    color: var(--DollarColor);
+    font-size: 2em;
+}
+
+.reset_button_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reset_button{
+    width: 90%;
+    background-color: var(--DollarColor);
+    color: var(--Verydarkcyan1);
+}
+
+.reset_button:hover{
+    cursor:grab;
+    background-color: var(--Lightgrayishcyan1);
+    color: var(--Verydarkcyan2);
+}
+
+.tip_label{
+    border-width: 0;
+    border-radius: 2px;
+    background-color: var(--Verydarkcyan1);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tip_label:hover{
+    cursor:grab;
+    background-color: var(--Lightgrayishcyan1);
+    color: var(--Verydarkcyan2);
+}
+
+.select_tip_container input[type="radio"]:checked+label{
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan1);
+}
+
+button{
+    border-width: 0;
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+input{
+    border-width: 1;
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    background-color: var(--Verydarkcyan1);
+    color: gray;
+    font-weight: 500;
+}
+
+input:hover{
+    cursor: pointer;
+    border-color: var(--DollarColor);
+}
+
+.cantBeZeroPara{
+    display: none;
+    margin: 0;
+    color: var(--warningText);
+}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+
+  <div class="content">
+    <div class="title_container">
+      <h1>SPLI</h1>
+      <h1>TTER</h1>
+    </div>
+    <div class="calculator_container">
+      <div class="left_container">
+        <div class="bill left_input_container">
+          <div class="bill_label_container">
+            <label>Bill</label>
+            <p id="bill-input_zero_para" class="cantBeZeroPara">Can't be zero</p>
+          </div>
+          <input class="left-input-field bill-input" type="text" placeholder="0">
+        </div>
+
+        <div class="select_tip_container">
+          <label class="select_tip_label">Select Tip %</label>
+          <input type="radio" name="tip" value="5" class="tip_bttn" id="tip_5_percentage_bttn" checked>
+          <label for="tip_5_percentage_bttn" class="tip_label">5%</label>
+          <input type="radio" name="tip" value="10" class="tip_bttn" id="tip_10_percentage_bttn">
+          <label for="tip_10_percentage_bttn" class="tip_label">10%</label>
+          <input type="radio" name="tip" value="15" class="tip_bttn" id="tip_15_percentage_bttn">
+          <label for="tip_15_percentage_bttn" class="tip_label">15%</label>
+          <input type="radio" name="tip" value="25" class="tip_bttn" id="tip_25_percentage_bttn">
+          <label for="tip_25_percentage_bttn" class="tip_label">25%</label>
+          <input type="radio" name="tip" value="50" class="tip_bttn" id="tip_50_percentage_bttn">
+          <label for="tip_50_percentage_bttn" class="tip_label">50%</label>
+          <input type="text" id="custom_tip_percentage_bttn" value="Custom" />
+        </div>
+
+        <div class="people_amount left_input_container">
+          <div class="number_of_people_label_container">
+            <label>Number of People</label>
+            <p id="people-input_zero_para" class="cantBeZeroPara">Can't be zero</p>
+          </div>
+          <input class="left-input-field people-input" type="text" placeholder="0">
+        </div>
+      </div>
+
+      <div class="right_container">
+        <div class="right_display tip_amount_container">
+          <div class="left_paragraphs">
+            <p class="top_paragraph">Tip Amount</p>
+            <p class="bottom_paragraph">/ person</p>
+          </div>
+          <div class="right_dollar_amount" id="total_tip_amount_per_person">
+            $0.00
+          </div>
+        </div>
+        <div class="right_display total_container">
+          <div class="left_paragraphs">
+            <p class="top_paragraph">Total</p>
+            <p class="bottom_paragraph">/ person</p>
+          </div>
+          <div class="right_dollar_amount" id="total_tip_amount">
+            $0.00
+          </div>
+        </div>
+        <div class="reset_button_container">
+          <button class="reset_button">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
